@@ -20,10 +20,19 @@ public class findPalindromesNotLCProblem {
         //solving using efficient pointer-based method
         input = input.replaceAll(" ", "");
 
+        int i = 0;
+        int j = input.length() - 1;
+        int loopLen = input.length()/2;
 
+        for(i = 0; i < loopLen; i++)
+        {
+            if(input.charAt(i) != input.charAt(j))
+            {
+                return false;
+            }
+        }
 
-
-        return false;
+        return true;
     }
 
     public static boolean palindromeSolver2(String input)
